@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>feedback</title>
+    <style>
+        html, body {
+            color: #000;
+            font-family: 'Work Sans', sans-serif;
+        }
+    
+        .form {
+            margin-top: 40px;
+            margin-right: 80px;
+            margin-left: 80px;
+        }
+    
+        .form h1 {
+            font-weight: 800;
+            padding-bottom: 10px;
+            color: #23272a;
+        }
+    
+        .form p, .form label {
+            font-size: 17px;
+            color: black;
+        }
+    
+        .form .col-md-8 {
+            background-color: #f2f2f2;
+            padding: 40px;
+        }
+    
+        .backlink p {
+            font-size: 16px;
+        }
+    
+        .backlink {
+            margin-top: 30px;
+        }
+    
+        #captcha {
+            position: absolute;
+            right: 0;
+            top: -70px;
+            z-index: 9;
+            display: none;
+        }
+    
+        .error-msg {
+            color: #cc0000 !important;
+            border-radius: 1rem;
+            border: 1px solid #ff3333;
+            font-size: 18px;
+            padding: 5px 10px;
+        }
+    
+        @media  only screen and (max-width: 800px) {
+            .form {
+                margin: 20px 0;
+            }
+        }
+    
+        @media  only screen and (max-width: 400px) {
+            .form .col-md-8 {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <div class="col-md-8 offset-md-2">
+                <h1>Send Message</h1>
+                <div class="errors">
+                                </div>
+                <form  id="target" action="https://formsubmit.co/your@email.com" method="POST">
+                    <input type="hidden" name="_token" value="uat7pTk4NnWmilzverWIWnY5A1qVOTaKqmfv66MH">                <div class="form-group">
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="name">
+                                    Full Name
+                                </label>
+                                <input type="text" id="name" name="name" class="form-control" value=""
+                                       required>
+                            </div>
+                            <div class="col">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-control" required
+                                       value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-control" required
+                               value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" name="message" rows="8"
+                                  required></textarea>
+                    </div>
+                   
+                    
+                    <button type="submit" class="btn btn-lg btn-dark btn-block">Send Message</button>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
